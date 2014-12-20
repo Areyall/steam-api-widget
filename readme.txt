@@ -4,7 +4,7 @@ Tags: steam, widget, api, profile, recent games
 Requires at least: 3.0.1
 Tested up to: 4.1
 Stable tag: 3.0.4
-Version: 1.0
+Version: 1.0.1
 License: GPLv2 or later
 
 This plugin will add a widget that displays your Steam profile.
