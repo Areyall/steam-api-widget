@@ -3,8 +3,7 @@ Contributors: Faith999
 Tags: steam, widget, api, profile, recent games 
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: trunk
-Version: 1.0.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 
 This plugin will add a widget that displays your Steam profile.
@@ -42,7 +41,7 @@ Visit http://8bit-life.com/steam-wordpress-plugin/
 = 1.0.1 =
 * supports non-Steam games
 
-= 1.0 =
+= 1.0.0 =
 *Release Date - 16th December, 2014*
 
 
