@@ -4,7 +4,7 @@
   Plugin Name: Steam-Api-Widget
   Plugin URI: http://8bit-life.com
   Description: A simple WordPress widget for your steam profile.
-  Version: 1.0.1
+  Version: 1.0.2
   Author: armin nowacki
   Author URI: http://8bit-life.com
   License: GPLv2 or later
@@ -20,7 +20,7 @@ class Steam_Api_Widget extends WP_Widget {
         "title" => "Steam",
         "apikey" => "221D4C81A2190C6AB2837576CC12DE6C",
         "steamid64" => '76561198017266021',
-        "count" => '7'
+        "count" => '5'
     );
 
     private function init_plugin_constants() {
@@ -56,7 +56,7 @@ class Steam_Api_Widget extends WP_Widget {
 
     private function register_scripts_and_styles() {
         if (!is_admin())
-            $this->load_file(PLUGIN_NAME, '/' . PLUGIN_SLUG . '/css/bootstrap.css');
+            $this->load_file(PLUGIN_NAME, '/' . PLUGIN_SLUG . '/css/steam-widget.css');
     }
 
     function Steam_Api_Widget() {
@@ -114,7 +114,6 @@ class Steam_Api_Widget extends WP_Widget {
 
             $profile = new Profile($data['profile']);
             $games = new Games($data['games']);
-
             include(WP_PLUGIN_DIR . '/' . PLUGIN_SLUG . '/views/widget.php');
         }
         echo '</div>';
