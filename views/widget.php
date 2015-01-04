@@ -40,15 +40,17 @@
 <div class="table">
 	<?php foreach ($games->GetRecentPlayedGames($count) as $game) : ?>
 		<div class="row">
-			<div class="column">
-				<img src="<?= $game->GetImage() ?>" title="<?= $game->GetName() ?>" />
-			</div>
-			<div class="column" style="padding: 0px 5px 0px 5px">
-				<p class="fg <?=$profile->GetPersonaState()?>">&ndash;</p>
-			</div>
-			<div class="column">
-				<p class="fg <?=$profile->GetPersonaState()?>"> <?= $game->GetName() ?></p>
-			</div>
+			<a href="<?= $game->GetLink() ?>" target="_blank">
+				<div class="column">
+					<img src="<?= $game->GetImage() ?>" title="<?= $game->GetName() ?>" />
+				</div>
+				<div class="column" style="padding: 0px 5px 0px 5px">
+					<p class="fg <?=$profile->GetPersonaState()?>">&ndash;</p>
+				</div>
+				<div class="column">
+					<p class="fg <?=$profile->GetPersonaState()?>"> <?= $game->GetName() ?></p>
+				</div>
+			</a>
 		</div>
 	<?php endforeach; ?>
 </div>
