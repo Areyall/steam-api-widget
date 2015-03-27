@@ -1,16 +1,27 @@
 #steam-widget {
-	font-family: Open Sans;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
 	color: gray;
 }
 
 #steam-widget p, 
 #steam-widget b,
-#steam-widget a, 
 #steam-widget em,
 #steam-widget img{
 	margin: 0px;
 	padding: 0px;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+#steam-widget div > a{
+	display: inherit;
+}
+
+#steam-widget a {
+	display: inline-block;
+	margin:0px;
+	padding:0px;
 	line-height: normal;
 	vertical-align: middle;
 }
@@ -34,7 +45,7 @@
 	padding: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
-	border-radius: 3px;
+	border-radius: 6px;
 }
 
 #steam-widget .message {

@@ -9,9 +9,7 @@ class Games {
 
     function Games($obj) {
         $this->data = $obj;
-
         $this->game = array();
-
 
         foreach ($this->data->games as $val) {
             $this->game[] = new Game($val);

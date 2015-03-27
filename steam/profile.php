@@ -8,53 +8,52 @@ class Profile {
         $this->data = $obj;
     }
 
-	/* 
-	 * Private Data
-	 */
-	function GetRealName() {
-		return isset($this->data->realname) ? $this->data->realname : "";
-	}
-	
-	function GetPrimaryClanId() {
-		return isset($this->data->primaryclanid) ? $this->data->primaryclanid : -1;
-	}
-	
-	function GetTimeCreated($format) {
+    /*
+     * Private Data
+     */
+    function GetRealName() {
+        return isset($this->data->realname) ? $this->data->realname : "";
+    }
+
+    function GetPrimaryClanId() {
+        return isset($this->data->primaryclanid) ? $this->data->primaryclanid : -1;
+    }
+
+    function GetTimeCreated($format) {
         return isset($this->data->timecreated) ? date($format, $this->data->timecreated) : "";
     }
 
     function GetGameId() {
         return isset($this->data->gameid) ? $this->data->gameid : -1;
     }
-	
-	function IsInGame() {
+
+    function IsInGame() {
         return isset($this->data->gameid) ? true : false;
     }
-	
-	function GetGameServerIp() {
+
+    function GetGameServerIp() {
         return isset($this->data->gameserverip) ? $this->data->gameserverip : "";
     }
-	
-	function GetGameExtraInfo() {
-		return isset($this->data->gameextrainfo) ? $this->data->gameextrainfo : "";
-	}
-	
-	function GetCountryCode() {
+
+    function GetGameExtraInfo() {
+        return isset($this->data->gameextrainfo) ? $this->data->gameextrainfo : "";
+    }
+
+    function GetCountryCode() {
         return isset($this->data->loccountrycode) ? $this->data->loccountrycode : "";
     }
 
+    /*
+     * Public Data
+     */
+    function GetSteamId() {
+        return $this->data->steamid;
+    }
 
-	/*
-	 * Public Data
-	 */
-	function GetSteamId() {
-		return $this->data->steamid;
-	}
-	
-	function GetPersonaName() {
+    function GetPersonaName() {
         return $this->data->personaname;
     }
-	
+
     function GetProfileUrl() {
         return $this->data->profileurl;
     }
@@ -66,12 +65,12 @@ class Profile {
     function GetAvatarMedium() {
         return $this->data->avatarmedium;
     }
-	
-	function GetAvatarFull() {
+
+    function GetAvatarFull() {
         return $this->data->avatarfull;
     }
-	
-	function GetPersonaState() {
+
+    function GetPersonaState() {
 
         if ($this->IsInGame())
             return "InGame";
@@ -104,10 +103,8 @@ class Profile {
         }
     }
 
-
     function GetLastLogOff($format) {
         return isset($this->data->lastlogoff) ? date($format, $this->data->lastlogoff) : "";
     }
-
 
 }

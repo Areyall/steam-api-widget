@@ -7,7 +7,7 @@ class Api {
     private $steamId;
     private $data;
 
-    function Api($key, $id) {
+    public function Api($key, $id) {
         $this->apiKey = $key;
         $this->steamId = $id;
 
@@ -19,7 +19,7 @@ class Api {
         $this->data = null;
     }
 
-    function GetData() {
+    public function GetData() {
 
         $this->data = $this->MultiRequest();
 
@@ -36,7 +36,7 @@ class Api {
         return $this->data;
     }
 
-    function MultiRequest() {
+    private function MultiRequest() {
 
 
         $cmi = curl_multi_init();
